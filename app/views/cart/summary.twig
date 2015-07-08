@@ -1,0 +1,38 @@
+{% extends 'templates/main.twig' %}
+
+{% block content %}
+
+
+{% if cart.all() is empty %}
+
+	<p> Cart empty </p>
+
+{% else %}
+
+<form action="{{ urlFor('update-item-quantity') }}" method="post" autocomplete="off">
+{% for item in cart.all() %}
+
+	{{ item.name }} 
+	$ {{ item.price|number_format(2, '.', ',') }} 
+	$ {{ item.tax|number_format(2, '.', ',') }} 
+	$ {{ item.totalprice|number_format(2, '.', ',') }}
+	<input type="text" value="{{ item.quantity }}" name="quantity[]">
+	<a href="{{ urlFor('remove-item', {"id": item.id}) }}" title="" onclick="return confirm('Delete item ?')"> Remove</a>
+	<input type="hidden" value="{{ item.id }}" name="id[]">
+
+	<hr>
+{% endfor %}
+
+	<div>
+		Total {{ cart.total }}
+	</div>
+
+	<input type="submit" value="Update Cart">
+	<a href="{{ urlFor('home') }}" title="">Checkout</a>
+	<a href="{{ urlFor('clear') }}" title="">Empty Cart</a>
+
+</form>
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title>Website | {% block title %} {% endblock %}</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+	{% include 'templates/partials/nav.twig' %}
+	{% include 'templates/partials/messages.twig' %}
+	{% block content %}{% endblock %}
+</body>
+</html>

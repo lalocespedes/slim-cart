@@ -1,0 +1,8 @@
+{% if flash is not empty %}
+	{% for key, msg in flash %}
+		<div id="feedback" class="{{ key }}">
+			<!--<a class="dismiss">Cerrar</a>-->
+	    	<p><strong>{{ msg }}</strong></p>
+		</div>
+	{% endfor %}
+{% endif %}

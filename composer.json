@@ -1,0 +1,21 @@
+{
+    "autoload":{
+        "psr-4":{
+            "lalocespedes\\": "app//lalocespedes"
+        }
+    },
+    "name": "lalocespedes/plaza",
+    "require": {
+        "php": ">=5.6.0",
+        "slim/slim": "~2.0",
+        "slim/views": "0.1.*",
+        "twig/twig": "~1.0",
+        "mike182uk/cart": "^2.2"
+    },
+    "authors": [
+        {
+            "name": "lalocespedes",
+            "email": "lalocespedes@gmail.om"
+        }
+    ]
+}

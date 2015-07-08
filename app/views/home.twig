@@ -1,0 +1,24 @@
+{% extends 'templates/main.twig' %}
+
+{% block content %}
+
+Welcome
+<hr>
+
+<i class="fa fa-desktop fa-4x"></i>
+<h4>Macbooks Pro</h4>
+<p>MBP8GB</p>
+<p>$ 1200</p>
+
+<a href="{{ urlFor('add-item', {"id": 2})}}" title="">add to cart</a>
+
+<hr>
+
+<i class="fa fa-mobile fa-4x"></i>
+<h4>Iphone 6</h4>
+<p>IP6123</p>
+<p>$ 1100</p>
+
+<a href="{{ urlFor('add-item', {"id": 1})}}" title="">add to cart</a>
+
+{% endblock %}
